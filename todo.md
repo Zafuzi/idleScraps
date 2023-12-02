@@ -1,7 +1,5 @@
 # todo
 
-- fix this project so windows users can use it
-	- symlinks dont work on windows
-- remove the need to use npm
-	- I am thinking make squids.full.min.js be a copied version
-	- Write an script to download latest squids.full.min.js from nodes to update
+[Game Design Document](https://docs.google.com/document/d/1FG0l9juCnrD2JjLyYNqGXzB1k7a5TX9-Fsru1M2vnek/edit?usp=sharing)
+
+- [ ] Build basic scrap collection loop / UI
