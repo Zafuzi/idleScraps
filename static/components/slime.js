@@ -4,7 +4,7 @@ function slime()
 	let slime_collide_sound = assets["data/plink.ogg"];
 
 	let sq = new Squid(vec(100, 100), slime_img);
-		sq.speed = 4;
+		sq.speed = 10;
 		sq.velocity.x = sq.speed;
 		sq.velocity.y = -sq.speed;
 
@@ -34,6 +34,6 @@ function slime()
 				slime_collide_sound.play();
 			}
 
-			sq.rotation += degrees2radians(sq.velocity.x + sq.velocity.y * 0.4);
+			sq.rotation += IdleMath.degrees2radians(sq.velocity.x + sq.velocity.y * 0.4);
 	});
 }
