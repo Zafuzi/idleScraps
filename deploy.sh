@@ -30,7 +30,7 @@ mkdir -p dist
 cp static/index.html dist
 cp static/*.js dist
 cp -rL static/data dist
-cp -rL static/components dist
+cp -rL static/imports dist
 
 if [[ $publish == t ]]; then
   echo "publishing to itch.io ..."
