@@ -4,30 +4,35 @@
 		<title>Tidepool</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			body, html {
-				width: 100vw;
-				height: 100vh;
-				overflow: hidden;
-				margin: 0;
-				padding: 0;
-				display: flex;
-				flex-flow: column;
-				align-items: center;
-				justify-content: center;
-				background-color: black;
-			}
-			canvas {
-				overflow: hidden;
-				background-color: #16041B !important;
-			}
-		</style>
+
+		<link rel="stylesheet" href="coughdrop.min.css">
+		<link rel="stylesheet" href="local.css">
 	</head>
 	<body>
+		<header>
+			<h1>Idle Scraps</h1>
+		</header>
+
+		<main>
+			<div>
+				<section id="resourcesRibbon">
+					<p>Scraps: __scraps__</p>
+					<p>Energy: __energy__</p>
+				</section>
+			</div>
+
+			<section>
+				<button id="collectScraps">Collect Scraps</button>
+				<button id="stopCollectingScraps">Stop Collecting Scraps</button>
+			</section>
+		</main>
+
 		<script src="rpc/rpc.js"></script>
-		<script src="squids.full.js"></script>
-		<script src="components/Math.js"></script>
-		<script src="components/slime.js"></script>
+
+		<script src="sleepless.js"></script>
+
+		<script src="imports/State.js"></script>
+		<script src="imports/Templates.js"></script>
 		<script src="game.js"></script>
 	</body>
 </html>

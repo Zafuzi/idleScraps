@@ -1,0 +1,109 @@
+:root {
+	--background: #3c4650;
+	--text: white;
+
+	--primary: #007bff;
+	--primary-text: white;
+
+	--secondary: #6c757d;
+	--secondary-text: white;
+
+	/* 20% darker than background */
+	--header: #272f36;
+}
+
+body, html {
+	font-size: 12pt;
+	font-family: sans-serif;
+
+	background-color: var(--background);
+	color: var(--text);
+
+	width: 100vw;
+	height: 100vh;
+
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	/* a grid where header is static and main scrolls */
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"header"
+		"main";
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+
+body > header {
+	grid-area: header;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px;
+	background-color: var(--header);
+}
+
+body > header > h1 {
+	margin: 0;
+}
+
+body > header > nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+body > header > nav > a {
+	color: var(--text);
+	text-decoration: none;
+	padding: 0.5em 1em;
+}
+
+body > header > nav > a:hover {
+	background-color: var(--secondary);
+}
+
+body > main {
+	grid-area: main;
+	overflow-y: scroll;
+}
+
+body > main > section {
+	padding: 1em;
+}
+
+body > main > section > h2 {
+	margin: 0;
+}
+
+/* a nice thin ribbon that shows across the top of main */
+#resourcesRibbon {
+	font-size: 13px;
+	position: sticky;
+	top: 0;
+	background-color: var(--secondary);
+	color: var(--secondary-text);
+	padding: 8px;
+	margin: 0;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+}
